@@ -1,3 +1,14 @@
-// Place all the styles related to the simple_pages controller here.
+body {
+font-family:  Helvetica, Arial, sans-serif;
+  color: black;
+  padding-top: 1%;
+  margin-bottom: 0%;
+}
+
+/* ============ Navigation ============ */
+.navbar {
+  background-color: #dc3e3e !important;
+  border-color: transparent;
+}
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
