@@ -48,17 +48,16 @@
   <!--static items -->
   <div class="carousel-item active">
     <div class="overlay"></div>
-    <img class="d-block w-100" src="/assets/MTB.jpg" alt="first-slide">
-    <div class="carousel-caption d-none d-md-block">
+    <img class="d-block w-100" src="<%= asset_path 'MTB.jpg' %>" alt="first-slide">
+    <div class="carousel-caption d-20 d-md-40">
     <h1> Welcome to Jacques' Bikes </h1>
     <h2> Affordable bikes for all </h2>
   </div>
 </div>
 <!--Dynamic items -->
-<!-- @products is limited to the first two items in the database (done in simple_pages_controller) -->
 <div class="carousel-item">
             <div class="overlay"></div>
-            <img class="d-block w-100" src="/assets/mac-blades.jpg">
+            <img class="d-block w-100" src="<%= asset_path 'mac-blades.jpg' %>" alt="first-slide">
             <!-- Carousel captions -->
             <div class="carousel-caption d-none d-md-block">
               <h1>Limited Edition City Bike</h1>
@@ -67,7 +66,7 @@
           </div>
           <div class="carousel-item">
             <div class="overlay"></div>
-            <img class="d-block w-100" src="/assets/sunset-bike.jpg">
+            <img class="d-block w-100" src="<%= asset_path 'sunset-bike.jpg' %>" alt="first-slide">
             <!-- Carousel captions -->
             <div class="carousel-caption d-none d-md-block">
               <h1>Mountain Bike</h1>
@@ -83,7 +82,6 @@
           <span class="sr-only">Next</span>
         </a>
         <!-- end carousel
-
 <!- Three column grid -->
 <section id="three-column-grid" class="content">
   <div class="container">
@@ -137,7 +135,7 @@
       <a href="#"><h3>BMX</h3></a>
       <img class="img-fluid" src="/assets/mbx.jpg">
       <p>Cycle like the next Mat Hoffman</p>
-      <p><strong>Colour: </strong>ed, blue and black</p>
+      <p><strong>Colour: </strong>red, blue and black</p>
       <strong>$150.56</strong>
     </div>
   </div><!-- /col -->
