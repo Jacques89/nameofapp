@@ -90,7 +90,8 @@
 <div class="container">
   <div class="row">
    <% @products.each do |product| %>
-    <div class="product-col col-sm-12 col-md-4 col-lg-4">
+   <%= render @product %>
+    <div class="carousel-item<%= " active" if product == @products.first %>">
      <div class="product element-shadow">
       <a href="#"><h3>Cruiser</h3></a>
       <%= image_tag 'cruzer.jpg', class: "img-fluid" %>
@@ -106,7 +107,8 @@
 <div class="container">
  <div class="row">
    <% @products.each do |product| %>
-  <div class="product-col col-sm-12 col-md-4 col-lg-4">
+   <%= render @product %>
+  <div class="carousel-item<%= " active" if product == @products.first %>">
     <div class="product element-shadow">
       <a href="#"><h3>BMX</h3></a>
       <%= image_tag 'mbx.jpg', class: "img-fluid" %>
@@ -124,7 +126,8 @@
 <div class="container">
  <div class="row">
    <% @products.each do |product| %>
-  <div class="product-col col-sm-12 col-md-4 col-lg-4">
+   <%= render @products %>
+  <div class="carousel-item<%= " active" if product == @products.first %>">
     <div class="product element-shadow">
       <a href="#"><h3>Race Bike</h3></a>
       <%= image_tag ('race.jpg'), class: "img-fluid" %>
