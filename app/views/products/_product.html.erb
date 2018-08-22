@@ -1,4 +1,8 @@
 <tr>
+  <div class="col-sm-2 col-md-4">
+    <% if product.image_url.present? %>
+    <%= image_tag(product.image_url, class: "img-responsive", id: "products_images") %>
+    <% end %>
        <td><%= product.name %></td>
        <td><%= product.description %></td>
        <td><%= product.image_url %></td>
