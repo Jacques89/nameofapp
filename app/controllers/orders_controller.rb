@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
    def index
+     @orders = Order.all
    end
 
    def show
@@ -12,5 +13,5 @@ class OrdersController < ApplicationController
    end
 
    def destroy
-   end 
+   end
 end
