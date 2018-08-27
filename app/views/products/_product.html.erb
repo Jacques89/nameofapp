@@ -1,7 +1,7 @@
 <tr>
   <div class="col-sm-2 col-md-4">
     <% if product.image_url.present? %>
-    <%= image_tag(product.image_url, class: "img-responsive", id: "products_images") %>
+    <%= image_tag(product.image_url, class: "img-responsive") %>
     <% end %>
     <% @products.each do |product| %>
     <% end %>
