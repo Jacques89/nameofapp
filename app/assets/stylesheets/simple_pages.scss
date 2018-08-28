@@ -1,14 +1,23 @@
 body {
-font-family:  Helvetica, Arial, sans-serif;
-  color: black;
-  padding-top: 0;
-  margin-bottom: 0%;
+  position: relative;
+  padding-top: 0px;
+  font-size: 1em;
+  line-height: normal;
+  color: #e0f0b0;
+  background-color: #b10808;
 }
-
 /* ============ Navigation ============ */
 .navbar {
   background-color: #dc3e3e !important;
   border-color: transparent;
+	width: 100%;
+	float: left;
+	padding: 0;
+  min-height: 100%
+}
+
+#navbar-logo {
+  padding-left: 15px;
 }
 
 .carousel-item-active {
@@ -17,6 +26,24 @@ position: absolute;
  left: 0;
  max-width: 100%;
  height: 100%;
+}
+
+/**Typography**/
+
+#pro-header,
+#ab-header,
+#con-header {
+  text-align: center;
+}
+
+#wr-header {
+  margin-right: 350px;
+}
+
+#con-para,
+#ab-para {
+  text-align: center;
+  padding-left: 500px
 }
 
 h1 {
@@ -31,6 +58,60 @@ h1 {
 
 #carousel-images {
   max-width: 100%;
+}
+
+
+/**forms**/
+
+
+product-form,
+.comment-form,
+.user-form {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.field,
+form {
+  margin-bottom: 0.8rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.form-row,
+.form-group {
+  width: 100%;
+  padding-right: 0.8rem;
+  margin-bottom: 0;
+  margin-top: 0.4em;
+}
+
+.form-group textarea,
+.form-group input {
+  width: 100%;
+  border-style: none !important;
+  font-size: 0.9rem;
+}
+
+input {
+  border-style: none !important;
+  padding: 2px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(168, 124, 121, 0.25);
+}
+
+input[type=submit] {
+  margin-top: 1em;
+}
+
+#form-box {
+  padding-left: 380px;
+  text-align: center;
 }
 
 // They will automatically be included in application.css.
