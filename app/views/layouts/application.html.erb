@@ -9,8 +9,9 @@
       <!-- Font Awesome CDN-->
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
       <title>Nameofapp</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
       <%= csp_meta_tag %>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <%= csrf_meta_tags %>
    </head>
     <body>
       <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
@@ -32,11 +33,11 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
         <li class="nav-log-item">
-          <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"nav-link") %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete,) %>
         </li>
         <% else %>
         <li class="nav-log-item">
-          <%= link_to('Login', new_user_session_path, class:"nav-link") %>
+          <%= link_to('Login', new_user_session_path,) %>
         </li>
         <% end %>
       </li>
@@ -59,6 +60,11 @@
          <% end %>
          <%= yield %>
      </div>
+     <div class="container notifications">
+        <% if notice %>
+            <p id="notice" class="alert alert-primary" role="alert"><%= notice %></p>
+        <% end %>
+      </div>
      <footer>
        &copy; Jacques' Bikes Berlin
     </footer>
