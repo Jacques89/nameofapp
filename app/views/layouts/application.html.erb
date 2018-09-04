@@ -33,11 +33,11 @@
       <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
         <li class="nav-log-item">
-          <%= link_to('Logout', destroy_user_session_path, method: :delete, class:"nav-link") %>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete,) %>
         </li>
         <% else %>
         <li class="nav-log-item">
-          <%= link_to('Login', new_user_session_path, class:"nav-link") %>
+          <%= link_to('Login', new_user_session_path,) %>
         </li>
         <% end %>
       </li>
@@ -59,9 +59,14 @@
          <p id="alert"><%= alert %></p>
          <% end %>
          <%= yield %>
+     </div>
+     <div class="container notifications">
+        <% if notice %>
+            <p id="notice" class="alert alert-primary" role="alert"><%= notice %></p>
+        <% end %>
       </div>
-      <footer>
-       &copy; 2018 Jacques' Bikes Berlin
-      </footer>
+     <footer>
+       &copy; Jacques' Bikes Berlin
+    </footer>
   </body>
 </html>
