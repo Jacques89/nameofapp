@@ -18,7 +18,8 @@
   <%= @product.color %>
 </p>
 
+<%= @product.highest_rating_comment %>
 
-<%= link_to 'Edit', edit_product_path(@product) class: "btn btn-primary"  %>
+<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-primary" %>
 
 <%= link_to 'Back', products_path %>
