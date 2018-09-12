@@ -13,12 +13,14 @@ body {
 	width: 100%;
 	float: left;
 	padding: 0;
-  min-height: 100%
+  min-height: 100%;
 }
 
 #navbar-logo {
   padding-left: 15px;
 }
+
+/* ============ Carousel ============ */
 
 .carousel-item-active {
 position: absolute;
@@ -125,7 +127,15 @@ input[type=submit] {
 
 #form-box-log {
   text-align: center;
+}
 
+#search-bx {
+  margin-left: 20em;
+  padding-right: 10em;
+}
+
+.btn {
+  margin-bottom: 5%;
 }
 
 // They will automatically be included in application.css.
