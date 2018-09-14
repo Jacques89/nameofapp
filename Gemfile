@@ -61,6 +61,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise', '~> 4.5'
 gem 'cancancan', '~> 2.2'
 gem 'will_paginate', '~> 3.1.0'
+gem 'stripe'
 group :production do
   gem 'pg'
 end
