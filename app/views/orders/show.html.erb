@@ -3,6 +3,6 @@
    <div class="order-info">
     <strong>Order ID: </strong><%= @order.id %>
     <strong>Product Name: </strong><%= @order.product.name %>
-    <strong>Total: </strong><%= number_to_currency(@order.total/100.to_f) %>
+    <strong>Price: </strong><%= number_to_currency(@product.total/100.to_f) %>
   </div>
 </div>
