@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_09_07_180958) do
     t.string "name"
     t.text "description"
     t.string "image_url"
+    t.decimal "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "color"
