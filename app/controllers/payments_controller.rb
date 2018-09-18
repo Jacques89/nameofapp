@@ -7,14 +7,14 @@ class PaymentsController < ApplicationController
     # Create the charge on Stripe's servers to charge the user's card
     begin
       charge = Stripe::Charge.create(
-        amount: (@product.total*100).to_i,
+        amount: (@product.total) # amount in cents, again
         currency: "eur",
         source: token,
         description: params[:stripeEmail]
       )
 
       if charge.paid
-        Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price.to_i)
+        Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
         UserMailer.order_placed(@user,@product).deliver_now
       end
 

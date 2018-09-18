@@ -2,14 +2,14 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :comments
   validates :name, presence: true
-  validates :price, presence: true
+  validates :total, presence: true
 
-  def price_show
-    "€ %.2f" % (self[:price]/100.0)
+  def total_show
+    "€ %.2f" % (self[:total]/100.0)
   end
 
-  def price
-    self[:price]
+  def total
+    self[:total]
   end
 
   def self.search(search_term)
