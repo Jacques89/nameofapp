@@ -1,7 +1,7 @@
 <h1 id="pro-header">Products</h1>
 
 <tr>
-  <%= cache @products do %>
+  <%= cache(cache_key_for_products) do %>
   <%= render @products %>
    <% end %>
 <br>

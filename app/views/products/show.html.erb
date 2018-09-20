@@ -1,8 +1,8 @@
-
-
+<% cache (@product) do %>
 <%= image_tag(@product.image_url, data_zoom_image: @product.image_url,
   class: "image-fluid img-thumbnail img-zoom",
   id: "bmx-img", width: "350") %>
+
 
 <p>
   <strong>Name:</strong>
@@ -28,6 +28,7 @@
   <strong>Price:</strong>
   <%= @product.price %>
 </p>
+<% end %>
 
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
