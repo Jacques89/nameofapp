@@ -64,6 +64,7 @@ gem 'cancancan', '~> 2.2'
 gem 'will_paginate', '~> 3.1.0'
 gem 'stripe'
 gem 'dalli'
+gem 'redis-rails'
 group :production do
   gem 'pg'
 end
