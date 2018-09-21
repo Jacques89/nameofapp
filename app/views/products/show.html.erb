@@ -3,33 +3,36 @@
   class: "image-fluid img-thumbnail img-zoom",
   id: "bmx-img", width: "350") %>
 
+<div class="container">
+ <div class="row">
+   <div class="show-product" data-product-id="<%= @product.id %>">
+  <p>
+    <strong>Name:</strong>
+    <%= @product.name %>
+  </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p>
+    <strong>Image url:</strong>
+    <%= @product.image_url %>
+  </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
+  <p>
+    <strong>Color:</strong>
+    <%= @product.color %>
+  </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @product.color %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-<% end %>
-
+  <p>
+    <strong>Price:</strong>
+    <%= @product.price %>
+  </p>
+  <% end %>
+ </div>
+</div>
 <p>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div> </p>
 
 <%= form_with(url: '/payments/create') do |form| %>
