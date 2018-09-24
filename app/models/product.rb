@@ -7,7 +7,7 @@ class Product < ApplicationRecord
   def price
     self[:price]
   end
-  
+
   def price_show
     "€ %.2f" % (self[:price]/100.0)
   end

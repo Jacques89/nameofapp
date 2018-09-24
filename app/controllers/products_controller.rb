@@ -74,9 +74,10 @@ end
       @product = Product.find(params[:id])
     end
 
+
     # Never trust parameters from the scary internet, only allow the white list through.
+    # Price cannot be blank
     def product_params
-      # price 'can't be blank'
       params.require(:product).permit(:name, :description, :image_url, :color, :price)
     end
 end

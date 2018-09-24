@@ -17,7 +17,7 @@ class PaymentsController < ApplicationController
         Order.create!(
           product_id: @product.id,
           user_id: @user.id,
-          total: @product.price
+          price: @product.price
         )
         UserMailer.order_placed(@user,@product).deliver_now
       end
