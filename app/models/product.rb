@@ -4,10 +4,6 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
 
-  def price
-    self[:price]
-  end
-
   def price_show
     "€ %.2f" % (self[:price]/100.0)
   end
@@ -18,6 +14,10 @@ class Product < ApplicationRecord
 
   def views
     $redis.get("product:#{id}")
+  end
+
+  def viewed
+    $redis.incr("product:#{id}")
   end
 
 # Called by <%= @product.highest_rating_comment %>
