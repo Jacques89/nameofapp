@@ -8,7 +8,6 @@ class PaymentsController < ApplicationController
     # Create the charge on Stripe's servers - this will charge the user's card
     begin
       charge = Stripe::Charge.create(
-        customer: customer_id,
         amount: @product.price, # amount in cents, again
         currency: "eur",
         source: token,
