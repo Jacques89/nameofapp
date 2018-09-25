@@ -4,6 +4,13 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :price, presence: true
 
+  def views
+    $redis.get("product:#{id}")
+  end
+   def viewed!
+    $redis.incr("product:#{id}")
+  end
+
   def price
     self[:price]
   end
