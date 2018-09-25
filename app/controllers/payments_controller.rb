@@ -15,7 +15,7 @@ class PaymentsController < ApplicationController
       )
 
     if charge.paid
-      # UserMailer.order_confirmation(@user, @product).deliver_now
+      UserMailer.order_confirmation(@user, @product).deliver_now
       Order.create!(
         :product_id => @product.id,
         :user_id => @user.id,
