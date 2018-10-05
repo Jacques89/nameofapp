@@ -12,14 +12,6 @@ class Product < ApplicationRecord
    Product.where("name LIKE ?", "%#{search_term}%")
   end
 
-  def views
-    $redis.get("product:#{id}")
-  end
-
-  def viewed
-    $redis.incr("product:#{id}")
-  end
-
 # Called by <%= @product.highest_rating_comment %>
   def highest_rating_comment
    comments.rating_desc.first
