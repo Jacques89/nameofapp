@@ -1,8 +1,21 @@
-<div class="container order_info">
-  <h2>Order Information</h2>
-   <div class="order-info">
-    <strong>Order ID: </strong><%= @order.id %>
-    <strong>Product Name: </strong><%= @order.product.name %>
-    <strong>Price: </strong><%= @order.total %>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Order Information</h2>
+      <table>
+        <tr>
+          <td><strong>Order ID: </strong><%= @order.id %></td>
+        </tr>
+        <tr>
+          <td><strong>Product Name: </strong><%= @order.product.name %></td>
+        </tr>
+        <tr>
+          <td><strong>Product Price: </strong><%= number_to_currency(@order.product.price, unit: '€', precision: 2) %></td>
+        </tr>
+        <tr>
+          <td><strong>Total Price: </strong><%= number_to_currency(@order.total, unit: '€', precision: 2) %></td>
+        </tr>
+      </table>
+   </div>
+ </div>
 </div>

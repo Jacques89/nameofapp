@@ -8,16 +8,16 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       @products = Product.search(search_term)
     else
-    @products = Product.limit(4)
+      @products = Product.limit(3)
+    end
   end
-end
+
   # GET /products/1
   # GET /products/1.json
   def show
     @comments = @product.comments.order("created_at DESC")
-    @comments = @comments.paginate(:page => params[:page], :per_page => 2)
+    @comments = @product.comments.paginate(page: params[:page], per_page: 2)
   end
-
 
   # GET /products/new
   def new
@@ -74,10 +74,8 @@ end
       @product = Product.find(params[:id])
     end
 
-
     # Never trust parameters from the scary internet, only allow the white list through.
-    # Price cannot be blank
     def product_params
-      params.require(:product).permit(:name, :description, :image_url, :color, :price)
+      params.require(:product).permit(:name, :description, :image_url, :string, :colour, :price)
     end
 end

@@ -1,44 +1,39 @@
-<div class="content-box skew first-box">
-  <h1 id="con-header">Get in touch</h1>
-      <% if notice %>
-        <p id="notice" class="alert alert-primary"><%= notice %></p>
+<% provide(:title, "Contact") %>
+
+<h1>Contact</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6">
+      <%= flash[:notice] %>
+
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+      <div class="row">
+        <div class="form-group">
+          <%= form.label :name %>
+          <%= form.text_field :name, class: "form-control input-lg", placeholder: "Enter Name" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :email %>
+          <%= form.text_field :email, class: "form-control input-lg", maxlength: "50px",  placeholder: "Enter Email" %>
+        </div>
+        <div class="form-group">
+          <%= form.label :message %>
+          <%= form.text_area :message, class: "form-control input-lg",  placeholder: "Enter Message", rows: 5 %>
+        </div>
+      </div>
+      <%= form.submit "Send", class: "form_label btn btn-default" %><br><br>
       <% end %>
-      <% if alert %>
-        <p id="alert" class="alert alert-primary"><%= alert %></p>
-      <% end %>
-    <div class="row">
-      <div class="col-md-8">
-        <p id="con-para">If there is any information not shown on the website or you would like
-          to know more, please contact me at xyz@gmail.com or fill out the form
-          below:</p>
+    </div>
+
+    <div class="col-md-6">
+      <div class="address">
+        <h2>Or you can contact me here: </h2>
+        <p>xyz@gmail.com</p>
+        <p>0176 7652347</p>
+        <p>Schottstraße 4</p>
+        <p>10273 Berlin</p>
       </div>
     </div>
   </div>
 </div>
-<div class="content-box" id="form-box">
-  <h1 id="wr-header">Write us an e-mail</h1>
-    <div class="row">
-      <div class="col-md-8">
-
-        <%= flash[:notice] %>
-
-        <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-        <div class="row">
-          <div class="form-group">
-            <%= form.label :name %>
-            <%= form.text_field :name, class: "form-control", placeholder: "Name", :required => true %>
-          </div>
-          <div class="form-group">
-            <%= form.label :email %>
-            <%= form.text_field :email, class: "form-control", placeholder: "Email", :required => true %>
-          </div>
-          <div class="form-group text-box">
-            <%= form.label :message %>
-            <%= form.text_area :message, class: "form-control", placeholder: "Message", rows: 5, :required => true %>
-          </div>
-        </div>
-        <%= form.submit "Send", class: "form_label" %>
-        <% end %>
-      </div>
-    </div>
-  </div>

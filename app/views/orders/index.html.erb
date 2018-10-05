@@ -1,13 +1,24 @@
-<h2>Orders</h2>
-
-<div class="row">
-  <% @orders.each do |order| %>
-    <div class="col-sm-12 col-md-4">
-      <h1> Order # <%= order.id %>:
-      <%= link_to order.product.name, order %>
-      </h1>
-     <p><%= order.product.description %></p>
-     <strong>€ <%= order.total.to_i %></strong>
-   </div><!-- /col -->
-  <% end %>
+<% provide(:title, "Orders") %>
+<div class="container-fluid">
+  <div class="row">
+    <% @orders.each do |order| %>
+      <div class="orders col-sm-2 col-md-4">
+        <h1>
+          Order # <%= order.id %>
+          <% if order.product %>
+            <%= link_to order.product.name, order %>
+          <% else %>
+            <p>No Orders</p>
+          <% end %>
+        </h1>
+        <% if order.product.image_url %>
+          <p><%= image_tag(order.product.image_url, class: "img-responsive") %></p>
+        <% end %>
+        <p><%= order.product.description %></p>
+        <strong><%= number_to_currency(order.product.price, unit: '€', precision: 2) %></strong>
+      </div><!-- /col -->
+    <% end %>
+  </div>
 </div>
+
+<br>
