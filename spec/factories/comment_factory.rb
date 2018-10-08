@@ -9,7 +9,7 @@ FactoryBot.define do
     name "Test Bike"
     description "Best Bike"
     image_url "mbx.jpg"
-    colour "black"
+    color "black"
     price "1200"
   end
 end

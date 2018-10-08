@@ -4,8 +4,8 @@ describe UsersController, type: :controller do
 #  let(:user1) { User.create!(email: "test1@test.com", password: "test123") }
 #  let(:user2) { User.create!(email: "test2@test.com", password: "test123") }
 before(:each) do
-  @user1 = FactoryBot.create(:test_user)
-  @user2 = FactoryBot.create(:test_user)
+  @user1 = FactoryBot.create(:user)
+  @user2 = FactoryBot.create(:user)
 end
 
 
@@ -33,7 +33,7 @@ end
     context 'when a user is not logged in' do
       it "redirects to login if user is not logged in" do
         get :show, params: { id: @user1.id }
-        expect(response).to redirect_to(new_user_session_path)
+        expect(response).to redirect_to(root_path)
       end
     end
 

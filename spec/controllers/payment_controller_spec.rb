@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe PaymentController, type: :controller do
+RSpec.describe PaymentsController, type: :controller do
 
 end
