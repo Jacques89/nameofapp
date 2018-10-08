@@ -4,7 +4,7 @@ describe Product do
 
   context "when the product has comments" do
 
-  let(:product) { FactoryBot.create!(:product) }
+  let(:product) { FactoryBot.create(:product) }
 
   let(:user) {User.create!(email: "test@test.com", password: "test123")}
   before do
