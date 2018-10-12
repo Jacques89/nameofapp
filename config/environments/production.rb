@@ -1,6 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-  config.action_mailer.default_url_options = { host: "whispering-springs-21097.herokuapp.com" }
+  config.action_mailer.default_url_options = { host: "jacquesbikes
+.herokuapp.com" }
   # Code is not reloaded between requests.
   config.cache_classes = true
 
@@ -90,8 +91,8 @@ Rails.application.configure do
   end
 
   # Do not dump schema after migrations.
-  config.active_record.dump_schema_after_migration = false grands
+  config.active_record.dump_schema_after_migration = false
 
-  config.web_socket_server_url = "wss://whispering-springs-21097.herokuapp.com/cable"
-  config.action_cable.allowed_request_origins = ['https://whispering-springs-21097.herokuapp.com', 'http://whispering-springs-21097.herokuapp.com']
+  config.web_socket_server_url = "wss://jacquesbikes.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://jacquesbikes.herokuapp.com', 'http://jacquesbikes.herokuapp.com']
 end
