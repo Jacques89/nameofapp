@@ -28,6 +28,10 @@
    line-height: 0em;
  }
 
+ .form-group {
+   margin-left: 15px;
+ }
+
  /**** product show ****/
 
  .sayings {
@@ -64,3 +68,9 @@
    color: #105cb6;
    border: 1px solid #9aafe5;
  }
+
+/**Login Page **/
+
+#form-box-log {
+  margin-bottom: 15px;
+}
