@@ -7,6 +7,6 @@
     <p><%= product.description %></p>
     <p>Colour: <%= product.color %></p>
     <p> Only <%= number_to_currency(product.price, unit: '€', precision: 2) %></p>
-    <%= link_to 'Show', product, class: "btn btn-default" %> <%= link_to 'Edit', edit_product_path(product), class: "btn btn-default" %> <%= link_to 'Destroy', product, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %>
+    <p> <%= link_to 'Show', product, class: "btn btn-default" %> <%= link_to 'Edit', edit_product_path(product), class: "btn btn-default" %> <%= link_to 'Destroy', product, class: "btn btn-default", method: :delete, data: { confirm: 'Are you sure?' } %> </p>
   </div>
 <% end %>
