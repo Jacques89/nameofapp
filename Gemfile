@@ -59,7 +59,7 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.7'
 gem 'cancancan', '~> 2.2'
 gem 'will_paginate', '~> 3.1.0'
 gem 'stripe'
